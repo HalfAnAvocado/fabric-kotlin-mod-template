@@ -22,7 +22,7 @@ For setup instructions please see the [Fabric Wiki page](https://fabricmc.net/wi
   <br />
   To the extent possible under law,
   <a rel="dct:publisher"
-     href="marvin-elsen.com">
+     href="https://marvin-elsen.com">
     <span property="dct:title">Marvin Elsen</span></a>
   has waived all copyright and related or neighboring rights to
   <span property="dct:title">Fabric Kotlin Mod Template</span>.
