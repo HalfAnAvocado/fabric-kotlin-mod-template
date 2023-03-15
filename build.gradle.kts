@@ -12,6 +12,7 @@ plugins {
     java
     kotlin("jvm") version "1.8.10"
     id("fabric-loom") version "1.1-SNAPSHOT"
+    id("com.modrinth.minotaur") version "2.+" // https://github.com/modrinth/minotaur#kotlin
 }
 
 repositories {
@@ -32,6 +33,24 @@ dependencies {
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
     modImplementation(libs.fabric.language.kotlin)
+}
+
+modrinth {
+    // TODO: Set the MODRINTH_TOKEN environment variable before running the modrinth task
+    // TODO: Configure modrinth properties
+    // Refer to https://github.com/modrinth/minotaur#available-properties for all available properties
+    projectId.set("modrinth-project-id")
+    versionType.set("release") // Can be "release", "beta" or "alpha"
+    uploadFile.set(tasks.remapJar)
+    debugMode.set(true) // TODO: Disable modrinth's debugMode
+    syncBodyFrom.set(rootProject.file("MODRINTH.md").readText())
+    dependencies {
+        // scope.type
+        // The scope can be `required`, `optional`, `incompatible`, or `embedded`
+        // The type can either be `project` or `version`
+        required.project("fabric-api")
+        required.project("fabric-language-kotlin")
+    }
 }
 
 kotlin {
