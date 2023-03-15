@@ -1,18 +1,16 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-// TODO: Change the project's group and version
-group = "com.example"
-version = "0.0.1+" + libs.versions.minecraft.get()
+group = "com.example" // TODO: Configure the project's group
+version = "0.0.1+" + libs.versions.minecraft.get() // TODO: Configure the project's version
 
 val javaVersion = JavaVersion.VERSION_17
 
-// TODO: Double-check whether the Fabric Loom and Kotlin version are up-to-date
 plugins {
     java
-    kotlin("jvm") version "1.8.10"
-    id("fabric-loom") version "1.1-SNAPSHOT"
-    id("com.modrinth.minotaur") version "2.+" // https://github.com/modrinth/minotaur#kotlin
+    kotlin("jvm") version "1.8.10" // TODO: Double-check whether the Kotlin version is up-to-date
+    id("fabric-loom") version "1.1-SNAPSHOT" // TODO: Double-check whether the Fabric Loom version is up-to-date (https://fabricmc.net/develop/)
+    id("com.modrinth.minotaur") version "2.+"// TODO: Double-check whether the Modrinth Minotaur version is up-to-date (https://github.com/modrinth/minotaur#kotlin)
 }
 
 repositories {
@@ -37,9 +35,8 @@ dependencies {
 
 modrinth {
     // TODO: Set the MODRINTH_TOKEN environment variable before running the modrinth task
-    // TODO: Configure modrinth properties
     // Refer to https://github.com/modrinth/minotaur#available-properties for all available properties
-    projectId.set("modrinth-project-id")
+    projectId.set("modrinth-project-id") // TODO: Configure modrinth project ID
     versionType.set("release") // Can be "release", "beta" or "alpha"
     uploadFile.set(tasks.remapJar)
     debugMode.set(true) // TODO: Disable modrinth's debugMode
