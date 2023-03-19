@@ -35,8 +35,8 @@ dependencies {
 }
 
 modrinth {
-    // TODO: Set the MODRINTH_TOKEN environment variable before running the modrinth task
     // Refer to https://github.com/modrinth/minotaur#available-properties for all available properties
+    token.set(System.getenv("MODRINTH_TOKEN")) // TODO: Set the MODRINTH_TOKEN environment variable before running the modrinth task
     projectId.set("modrinth-project-id") // TODO: Configure modrinth project ID
     versionType.set("release") // Can be "release", "beta" or "alpha"
     uploadFile.set(tasks.remapJar)
