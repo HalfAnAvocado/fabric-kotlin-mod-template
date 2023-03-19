@@ -20,7 +20,7 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "com.example.template.TemplateMod"
+        "value": "com.example.template.TemplateModKt::init"
       }
     ]
   },
