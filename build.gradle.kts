@@ -7,6 +7,7 @@ version = "0.0.1+" + libs.versions.minecraft.get() // TODO: Configure the projec
 val javaVersion = JavaVersion.VERSION_17
 
 plugins {
+    base
     java
     kotlin("jvm") version "1.8.10" // TODO: Double-check whether the Kotlin version is up-to-date
     id("fabric-loom") version "1.1-SNAPSHOT" // TODO: Double-check whether the Fabric Loom version is up-to-date (https://fabricmc.net/develop/)
