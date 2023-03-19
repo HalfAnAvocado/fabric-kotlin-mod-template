@@ -67,20 +67,6 @@ java {
 }
 
 tasks {
-    withType<JavaCompile> {
-        options.encoding = "UTF-8"
-    }
-
-    withType<KotlinCompile> {
-        compilerOptions {
-            jvmTarget.set(JvmTarget.fromTarget(javaVersion.toString()))
-        }
-    }
-
-    jar {
-        from("LICENSE")
-    }
-
     processResources {
         filesMatching("fabric.mod.json") {
             expand(
@@ -102,5 +88,19 @@ tasks {
                 )
             )
         }
+    }
+
+    withType<JavaCompile> {
+        options.encoding = "UTF-8"
+    }
+
+    withType<KotlinCompile> {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.fromTarget(javaVersion.toString()))
+        }
+    }
+
+    jar {
+        from("LICENSE")
     }
 }
