@@ -9,8 +9,8 @@ val javaVersion = JavaVersion.VERSION_17
 plugins {
     base
     java
-    kotlin("jvm") version "1.8.20" // TODO: Double-check whether the Kotlin version is up-to-date
-    id("fabric-loom") version "1.1-SNAPSHOT" // TODO: Double-check whether the Fabric Loom version is up-to-date (https://fabricmc.net/develop/)
+    kotlin("jvm") version "1.8.21" // TODO: Double-check whether the Kotlin version is up-to-date
+    id("fabric-loom") version "1.2-SNAPSHOT" // TODO: Double-check whether the Fabric Loom version is up-to-date (https://fabricmc.net/develop/)
     id("com.modrinth.minotaur") version "2.+"// TODO: Double-check whether the Modrinth Minotaur version is up-to-date (https://github.com/modrinth/minotaur#kotlin)
 }
 
