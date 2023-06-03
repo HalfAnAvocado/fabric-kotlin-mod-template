@@ -16,8 +16,8 @@ dependencyResolutionManagement {
         create("libs") {
             version("minecraft", "1.19.4") // TODO: Double-check whether all the dependency versions are up-to-date
             version("yarn", "1.19.4+build.2")
-            version("fabric-loader", "0.14.19")
-            version("fabric-api", "0.81.1+1.19.4")
+            version("fabric-loader", "0.14.21")
+            version("fabric-api", "0.83.0+1.19.4")
             version("fabric-language-kotlin", "1.9.4+kotlin.1.8.21")
 
             library("minecraft", "com.mojang", "minecraft").versionRef("minecraft")
